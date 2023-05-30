@@ -3,3 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::selection{
+    background-color: rgb(203,
+        166,
+        245);
+}
