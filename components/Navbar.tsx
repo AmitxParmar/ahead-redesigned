@@ -1,37 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
-import localFont from 'next/font/local'
+
 const pop = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const euclid = localFont({
-  src: [
-    {
-      path: "/fonts/Euclid-Circular-B-Light300.ttf",
-      weight: "300",
-      style: "normal",
-    },
-
-    {
-      path: "/fonts/Euclid-Circular-B-Medium500.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "/fonts/Euclid-Circular-B-SemiBold600.ttf",
-      weight: "600",
-      style: "normal",
-    },
-  ],
-});
 
 const Navbar = () => {
   return (
-    <header className={`bg-white border fixed w-full antialiased h-28 ${pop.className} `}>
-      <nav className="flex font-semibold items-center justify-evenly flex-row h-full">
+    <header className={`bg-white border z-10 fixed w-full antialiased h-28`}>
+      <nav className="flex font-semibold justify-around items-center sm:justify-evenly flex-row h-full">
         <div className="p-2 m-1 rounded-md object-contain object-center overflow-hidden">
           <Image
             src="/logoCropped.jpg"
