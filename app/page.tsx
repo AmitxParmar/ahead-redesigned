@@ -9,10 +9,6 @@ export default function Home() {
         <LandingPage />
       </section>
       <div className="bg-gray-300 h-28 w-28">2</div>
-      <div className="bg-gray-300 h-28 w-28">3</div>
-      <div className="bg-gray-300 h-28 w-28"></div>
-      <div className="bg-black h-28 w-28"></div>
-      <div className="bg-black h-28 w-28"></div>
       <div className="bg-black h-28 w-28"></div>
       <Footer />
     </main>

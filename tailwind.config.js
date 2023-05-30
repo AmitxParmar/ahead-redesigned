@@ -7,8 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        
+      animation: {
+        "spin-slow": "spin 4s linear infinite",
+        "translate-x": "translateX 1s ease-in"
+      },
+      keyframes: {
+        translateX: {
+          '0%': { transform: 'translateX(2.5rem)' },
+          '100%': { transform: 'translateX(5rem)' },
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
