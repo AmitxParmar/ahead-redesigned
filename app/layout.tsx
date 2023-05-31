@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scrollbar-thumb-gray-300 scrollbar-thin overscroll-none"
+      className="scrollbar-thumb-gray-300 scrollbar-thin "
     >
-      <body className={`container ${inter.className}`}>
+      <body className={`bg-white overflow-x-hidden ${inter.className}`}>
         <Navbar />
         {children}
       </body>
