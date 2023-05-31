@@ -24,16 +24,16 @@ const Navbar = () => {
 
         <div className="text-black items-center px-10">
           <ul className="w-full cursor-pointer gap-x-2 font-medium hidden md:flex md:flex-row md:justify-around text-lg items-center">
-            <li className="hover:bg-[rgb(234,218,247)] max-h-[50px] px-10 py-2 rounded-full">
+            <li className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300 border max-h-[50px] px-10 py-2 rounded-full">
               Emotions
             </li>
-            <li className="hover:bg-[rgb(234,218,247)] max-h-[50px] px-10 py-2 rounded-full">
+            <li className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300 border max-h-[50px] px-10 py-2 rounded-full">
               Menifesto
             </li>
-            <li className="hover:bg-[rgb(234,218,247)] max-h-[50px] px-10 py-2 rounded-full">
+            <li className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300 border max-h-[50px] px-10 py-2 rounded-full">
               Self-awareness test
             </li>
-            <li className="hover:bg-[rgb(234,218,247)] max-h-[50px] px-10 py-2 rounded-full">
+            <li className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300 border max-h-[50px] px-10 py-2 rounded-full">
               Work with us
             </li>
           </ul>

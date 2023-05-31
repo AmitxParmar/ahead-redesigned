@@ -1,16 +1,9 @@
-@import url('https://fonts.cdnfonts.com/css/euclid-circular-a');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-::selection{
-    background-color: rgb(203,
-        166,
-        245);
-}
-
-html,
-body{
-    font-family: 'Euclid Circular A', sans-serif;
+::selection {
+    background-color: rgb(203, 166, 245);
+    color: white;
 }

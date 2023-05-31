@@ -3,6 +3,7 @@ import LandingPage from "@/components/LandingPage";
 import Image from "next/image";
 import Showcase from "@/components/Showcase";
 import GetFamiliar from "@/components/GetFamiliar";
+import AppIntro from "@/components/AppIntro";
 export default function Home() {
   const EQBeatsIQ = [
     "People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships.",
@@ -19,6 +20,9 @@ export default function Home() {
       </section>
       <section className="justify-start">
         <GetFamiliar />
+      </section>
+      <section className="relative overflow-hidden mx-6 my-28">
+        <AppIntro/>
       </section>
       <section className="md:py-12">
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />

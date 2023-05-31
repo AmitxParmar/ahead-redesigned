@@ -3,7 +3,7 @@ import Card from "./Card";
 import Image from "next/image";
 
 const GetFamiliar = () => {
-  console.error(typeof "😄");
+  
   return (
     <div className="w-screen">
       <div className="px-12 mb-28">
@@ -46,7 +46,6 @@ const GetFamiliar = () => {
     They are more successful in their pursuits and make for inspiring leaders. According to science, they earn $29k a year."
             emoji="😄"
           />
-       
         </div>
       </div>
     </div>
