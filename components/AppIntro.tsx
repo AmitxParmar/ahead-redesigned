@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import { delay, motion } from "framer-motion";
 type Props = {};
 
 const AppIntro = (props: Props) => {
@@ -27,7 +27,22 @@ const AppIntro = (props: Props) => {
           height={250}
         />
       </div> */}
-      <div className="relative items-start justify-start bg-[url('/emotion-list-bg-left.png')] mt-20 w-2/4 p-12 tracking-tighter bg-contain bg-no-repeat bg-center flex flex-col">
+      <motion.div
+        initial={{
+          x: -50,
+          y: -50,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true
+        }}
+        className="relative items-start justify-start bg-[url('/emotion-list-bg-left.png')] mt-20 w-2/4 p-12 tracking-tighter bg-contain bg-no-repeat bg-center flex flex-col"
+      >
         <h6 className="text-lg font-medium mb-4">Built out of frustration</h6>
         <p className="text-[70px] leading-[4.5rem] font-bold mb-10">
           Meet the ahead app
@@ -50,7 +65,7 @@ const AppIntro = (props: Props) => {
             />
           </Link>
         </div>
-      </div>
+      </motion.div>
 
       <div className="relative mt-20 w-2/4 p-12 tracking-tighter  bg-contain bg-no-repeat items-center justify-center ease-in-out flex flex-col">
         <div className="text-gray-700 px-6 text-2xl leading-relaxed">

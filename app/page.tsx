@@ -1,7 +1,7 @@
 "use client";
-import gsap from "gsap";
+
 import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Footer from "@/components/Footer";
 import LandingPage from "@/components/LandingPage";
 import Image from "next/image";
@@ -9,38 +9,44 @@ import Showcase from "@/components/Showcase";
 import GetFamiliar from "@/components/GetFamiliar";
 import AppIntro from "@/components/AppIntro";
 import SelfImprovementTour from "@/components/SelfImprovementTour";
+
+import { motion, useScroll, useSpring } from "framer-motion";
+
 export default function Home() {
-  const containerRef = useRef(null);
   const EQBeatsIQ = [
     "People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships.",
     "They are more successful in their pursuits and make for inspiring leaders. According to science, they earn $29k a year.",
   ];
 
   return (
-    <main className="flex bg-white w-screen pt-32 min-h-screen flex-col items-center justify-between gap-y-3 overflow-x-hidden">
+    <motion.main
+      animate={{ scrollBehavior: "smooth"}}
+      className="flex bg-white w-screen pt-32 min-h-screen flex-col items-center justify-between gap-y-3 overflow-x-hidden"
+    >
       <section className="relative overflow-hidden mx-6">
         <LandingPage />
       </section>
 
-      <section className="md:py-12">
+      <section className="md:py-12 mx-6">
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
       </section>
-      
+
       <section className="justify-start">
         <GetFamiliar />
       </section>
-      <section className="relative overflow-hidden mx-6 my-28">
+
+      <section className="relative overflow-hidden mx-6">
         <AppIntro />
       </section>
-      <section>
-        
-      </section>
+
+      <section></section>
+
       <section className="md:py-12">
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
       </section>
 
       <div className="bg-black h-28 w-28"></div>
       <Footer />
-    </main>
+    </motion.main>
   );
 }

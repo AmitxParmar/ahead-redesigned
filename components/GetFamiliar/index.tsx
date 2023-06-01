@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "./Card";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
+
 const GetFamiliar = () => {
+  const control = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
     <div className="w-screen">
-      <div className="px-12 mb-28">
+      <div className="px-12 mb-7">
         <motion.h1
           initial={{
-            x: -100,
             opacity: 0,
+            x: "-50%"
           }}
-          viewport={{ once: true }}
-          animate={{
+          whileInView={{
             x: 0,
             opacity: 1,
+            transition: {
+              duration: 2,
+              damping: 100,
+              stiffness: 100
+            }
           }}
-          transition={{ delay: 1.5 }}
+
           className="text-[60px] h-auto w-auto font-bold flex "
         >
           Does this sound familiar...
@@ -31,8 +45,20 @@ const GetFamiliar = () => {
           </span>
         </motion.h1>
       </div>
-      <motion.div className="h-fit oveflow-scroll">
-        <div className="min-w-full flex flex-row scrollbar-thumb-black scrollbar-track-slate-900 h-fit">
+      <div
+        className="max-w-full h-auto whitespace-nowrap overflow-x-scroll overflow-y-clip scrollbar-none ">
+        <motion.div
+          initial={{ x: "80vw", opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            x: "-10vw",
+            transition: {
+              duration: 2
+            }
+          }}
+
+          className="overflow-visible scrollbar-thin whitespace-nowrap flex flex-row px-26 h-[400px] items-center justify-center"
+        >
           <Card
             title="You argue with a colleague"
             description="People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships.
@@ -69,8 +95,8 @@ const GetFamiliar = () => {
     They are more successful in their pursuits and make for inspiring leaders. According to science, they earn $29k a year."
             emoji="😄"
           />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
