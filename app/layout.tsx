@@ -2,8 +2,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
 export const metadata = {
@@ -12,9 +11,12 @@ export const metadata = {
 };
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const pop = Poppins({ subsets: ["latin"], weight:["200","300","500","600"] });
+const pop = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
-gsap.registerPlugin(ScrollToPlugin);
+
 
 export default function RootLayout({
   children,

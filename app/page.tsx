@@ -1,14 +1,21 @@
+"use client";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from "@/components/Footer";
 import LandingPage from "@/components/LandingPage";
 import Image from "next/image";
 import Showcase from "@/components/Showcase";
 import GetFamiliar from "@/components/GetFamiliar";
 import AppIntro from "@/components/AppIntro";
+import SelfImprovementTour from "@/components/SelfImprovementTour";
 export default function Home() {
+  const containerRef = useRef(null);
   const EQBeatsIQ = [
     "People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships.",
     "They are more successful in their pursuits and make for inspiring leaders. According to science, they earn $29k a year.",
   ];
+
   return (
     <main className="flex bg-white w-screen pt-32 min-h-screen flex-col items-center justify-between gap-y-3 overflow-x-hidden">
       <section className="relative overflow-hidden mx-6">
@@ -18,11 +25,15 @@ export default function Home() {
       <section className="md:py-12">
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
       </section>
+      
       <section className="justify-start">
         <GetFamiliar />
       </section>
       <section className="relative overflow-hidden mx-6 my-28">
-        <AppIntro/>
+        <AppIntro />
+      </section>
+      <section>
+        
       </section>
       <section className="md:py-12">
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
