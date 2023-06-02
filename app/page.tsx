@@ -49,11 +49,11 @@ export default function Home() {
       <section className="w-screen overflow-hidden">
         <WhatOthersThinkOfYou />
       </section>
-      <section className="w-screen h-screen">
+      {/* Sign section */}
+      <section className="w-screen h-full">
         <Privacy />
       </section>
-      {/* Sign section */}
-      <div className="bg-black h-28 w-28"></div>
+      
       <Footer />
     </motion.main>
   );
