@@ -6,7 +6,8 @@ type Props = {};
 
 const AppIntro = (props: Props) => {
   return (
-    <div className="relative h-screen rounded-3xl overflow-hidden flex md:flex-row w-full bg-[#f7e6da] ">
+    <div
+      className="relative h-screen rounded-3xl overflow-hidden flex md:flex-row w-full bg-[#f7e6da] ">
       {/* <div className="absolute items-center justify-start bg-[url('/emotion-list-bg-left.png')] flex flex-row bg-repeat-x bg-center bg-cover">
         <Image
           src={"/emotion-list-bg-right.png"}
@@ -30,17 +31,16 @@ const AppIntro = (props: Props) => {
       <motion.div
         initial={{
           x: -50,
-          y: -50,
+          y: 50,
           opacity: 0,
         }}
-        animate={{
+        whileInView={{
           x: 0,
           opacity: 1,
           y: 0,
+          transition: { duration: 1.5 }
         }}
-        viewport={{
-          once: true
-        }}
+
         className="relative items-start justify-start bg-[url('/emotion-list-bg-left.png')] mt-20 w-2/4 p-12 tracking-tighter bg-contain bg-no-repeat bg-center flex flex-col"
       >
         <h6 className="text-lg font-medium mb-4">Built out of frustration</h6>
@@ -68,19 +68,25 @@ const AppIntro = (props: Props) => {
       </motion.div>
 
       <div className="relative mt-20 w-2/4 p-12 tracking-tighter  bg-contain bg-no-repeat items-center justify-center ease-in-out flex flex-col">
-        <div className="text-gray-700 px-6 text-2xl leading-relaxed">
-          <p className="mb-6">
-            A personalized pocket coach that provides bitesized, science driven
-            tools to boost emotional intelligence.
-          </p>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 1.5 },
+          }}
+          className="text-gray-700 px-6 text-2xl leading-relaxed">
+        <p className="mb-6">
+          A personalized pocket coach that provides bitesized, science driven
+          tools to boost emotional intelligence.
+        </p>
 
-          <p className="">
-            A personalized pocket coach that provides bitesized, science driven
-            tools to boost emotional intelligence.
-          </p>
-        </div>
-      </div>
+        <p className="">
+          A personalized pocket coach that provides bitesized, science driven
+          tools to boost emotional intelligence.
+        </p>
+      </motion.div>
     </div>
+    </div >
   );
 };
 

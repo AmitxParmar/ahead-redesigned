@@ -30,13 +30,11 @@ const Navbar = () => (
           {navItems.map((item, index) => (
             <motion.li
               key={index}
-              whileHover={{ scale: 1.3 }}
-              initial={{ scale: 1.1 }}
-              animate={{ scale: 1 }}
-
-              className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300  max-h-[50px] px-10 py-2 rounded-full"
+              whileHover={{ scale: 1.2 }}
+              
+              className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300  max-h-[50px] items-center justify-center px-10 py-2 rounded-full"
             >
-              {item}
+              <p className="align-middle items-center justify-center">{item}</p>
             </motion.li>
           ))}
         </ul>

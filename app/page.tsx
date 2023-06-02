@@ -11,6 +11,7 @@ import AppIntro from "@/components/AppIntro";
 import SelfImprovementTour from "@/components/SelfImprovementTour";
 
 import { motion, useScroll, useSpring } from "framer-motion";
+import WhatOthersThinkOfYou from "@/components/WhatOthersThinkOfYou";
 
 export default function Home() {
   const EQBeatsIQ = [
@@ -20,7 +21,7 @@ export default function Home() {
 
   return (
     <motion.main
-      animate={{ scrollBehavior: "smooth"}}
+      animate={{ scrollBehavior: "smooth" }}
       className="flex bg-white w-screen pt-32 min-h-screen flex-col items-center justify-between gap-y-3 overflow-x-hidden"
     >
       <section className="relative overflow-hidden mx-6">
@@ -39,12 +40,18 @@ export default function Home() {
         <AppIntro />
       </section>
 
-      <section></section>
+      <section>
+        <SelfImprovementTour />
+      </section>
 
       <section className="md:py-12">
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
       </section>
 
+      <section className="px-28">
+        <WhatOthersThinkOfYou />
+      </section>
+      {/* Sign section */}
       <div className="bg-black h-28 w-28"></div>
       <Footer />
     </motion.main>
