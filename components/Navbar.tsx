@@ -29,25 +29,24 @@ const Navbar = () => (
 
       <div className="text-black items-center px-10">
         <motion.ul
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.2,
-            ease: [0, 0.71, 0.2, 1.01],
-            scale: {
-              type: "spring",
-              damping: 5,
-              stiffness: 100,
-              restDelta: 0.001
-            }
-          }}
+          
           className="w-full cursor-pointer gap-x-2 font-medium hidden md:flex md:flex-row md:justify-around text-lg items-center">
           {navItems.map((item, index) => (
             <motion.li
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001
+                }
+              }}
               key={index}
-             
-              
-              className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300  max-h-[50px] items-center justify-center px-10 py-2 rounded-full"
+              className="hover:bg-[rgb(234,218,247)] hover:shadow-lg max-h-[50px] items-center justify-center px-10 py-2 rounded-full"
             >
               <p className="align-middle items-center justify-center">{item}</p>
             </motion.li>
@@ -55,7 +54,7 @@ const Navbar = () => (
         </motion.ul>
       </div>
 
-      <div className="rounded-full overflow-hidden bg-black text-white  hover:bg-white hover:text-black hover:border-black border">
+      <div className="rounded-full overflow-hidden bg-black text-white  hover:bg-black/50 hover:shadow-lg border">
         <button className="px-6 py-4 tracking-wide">
           <p className="font-semibold items-center my-auto">Download app</p>
         </button>

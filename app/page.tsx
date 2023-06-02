@@ -9,6 +9,7 @@ import SelfImprovementTour from "@/components/SelfImprovementTour";
 
 import { motion } from "framer-motion";
 import WhatOthersThinkOfYou from "@/components/WhatOthersThinkOfYou";
+import Privacy from "@/components/Privacy";
 
 export default function Home() {
   const EQBeatsIQ = [
@@ -37,7 +38,7 @@ export default function Home() {
         <AppIntro />
       </section>
 
-      <section className="">
+      <section className="w-screen">
         <SelfImprovementTour />
       </section>
 
@@ -45,8 +46,11 @@ export default function Home() {
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
       </section>
 
-      <section className="px-28 mx-12 relative overflow-hidden">
+      <section className="w-screen overflow-hidden">
         <WhatOthersThinkOfYou />
+      </section>
+      <section className="w-screen h-screen">
+        <Privacy />
       </section>
       {/* Sign section */}
       <div className="bg-black h-28 w-28"></div>

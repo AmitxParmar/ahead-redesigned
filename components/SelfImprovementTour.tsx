@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 const SelfImprovementTour = () => (
-  <div className="relative bg-transparent w-screen h-full mx-12 px-12">
+  <div className="relative my-28 h-full mx-12 px-12">
     <div className="px-12 mb-7 w-full h-full">
       <motion.h1
         initial={{
