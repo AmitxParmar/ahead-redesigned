@@ -4,7 +4,7 @@ type Props = {}
 
 const Privacy = (props: Props) => {
     return (
-        <div className=' flex px-12 py-28 bg-green-200 mx-9' >
+        <div className='rounded-3xl flex px-12 py-28 bg-green-200 mx-8' >
             <div className='flex gap-y-4 flex-col text-center py-12 items-center justify-center  px-[20%]'>
                 <h4 className='font-medium text-lg'>We take privacy seriously</h4>
                 <h3 className='text-3xl font-bold'>Before we get Started</h3>

@@ -10,6 +10,9 @@ import SelfImprovementTour from "@/components/SelfImprovementTour";
 import { motion } from "framer-motion";
 import WhatOthersThinkOfYou from "@/components/WhatOthersThinkOfYou";
 import Privacy from "@/components/Privacy";
+import Careers from "@/components/Careers";
+
+import AboutUs from "@/components/LearnMore";
 
 export default function Home() {
   const EQBeatsIQ = [
@@ -52,6 +55,12 @@ export default function Home() {
       {/* Sign section */}
       <section className="w-screen h-full">
         <Privacy />
+      </section>
+      <section className="w-screen h-full">
+        <Careers />
+      </section>
+      <section className="w-screen h-full">
+        <AboutUs/>
       </section>
       
       <Footer />
