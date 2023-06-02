@@ -1,40 +1,11 @@
-import React, { useCallback, useRef, useLayoutEffect, useState } from "react";
+import React from "react";
 import Card from "./Card";
 import Image from "next/image";
 import {
   motion,
-  useScroll,
-  useTransform,
-  useSpring
 } from "framer-motion";
 
 const GetFamiliar = () => {
-
-  const scrollRef = useRef(null);
-  const [scrollRange, setScrollRange] = useState(0);
-  const [viewportW, setViewportW] = useState(0);
-
-  useLayoutEffect(() => {
-    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
-  }, [scrollRef]);
-
-  const onResize = useCallback((entries) => {
-    for (let entry of entries) {
-      setViewportW(entry.contentRect.width);
-    }
-  }, []);
-
-
-
-  const { scrollYProgress } = useScroll();
-  const transform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, -scrollRange + viewportW]
-  );
-  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
-  const spring = useSpring(transform, physics);
-
 
   return (
     <div className="w-screen">
@@ -78,8 +49,7 @@ const GetFamiliar = () => {
               duration: 2
             }
           }}
-          ref={scrollRef}
-          style={{ x: spring }}
+         
           className="overflow-visible scrollbar-none whitespace-nowrap flex flex-row px-26 h-[400px] items-center justify-center"
         >
           <Card

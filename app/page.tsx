@@ -1,16 +1,13 @@
 "use client";
-
-import { useEffect, useRef } from "react";
-
 import Footer from "@/components/Footer";
 import LandingPage from "@/components/LandingPage";
-import Image from "next/image";
+
 import Showcase from "@/components/Showcase";
 import GetFamiliar from "@/components/GetFamiliar";
 import AppIntro from "@/components/AppIntro";
 import SelfImprovementTour from "@/components/SelfImprovementTour";
 
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import WhatOthersThinkOfYou from "@/components/WhatOthersThinkOfYou";
 
 export default function Home() {

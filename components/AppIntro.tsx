@@ -75,17 +75,17 @@ const AppIntro = (props: Props) => {
             transition: { duration: 1.5 },
           }}
           className="text-gray-700 px-6 text-2xl leading-relaxed">
-        <p className="mb-6">
-          A personalized pocket coach that provides bitesized, science driven
-          tools to boost emotional intelligence.
-        </p>
+          <p className="mb-6">
+            A personalized pocket coach that provides bitesized, science driven
+            tools to boost emotional intelligence.
+          </p>
 
-        <p className="">
-          A personalized pocket coach that provides bitesized, science driven
-          tools to boost emotional intelligence.
-        </p>
-      </motion.div>
-    </div>
+          <p className="">
+            A personalized pocket coach that provides bitesized, science driven
+            tools to boost emotional intelligence.
+          </p>
+        </motion.div>
+      </div>
     </div >
   );
 };
