@@ -15,7 +15,7 @@ const navItems = [
   "Work with us",
 ];
 const Navbar = () => (
-  <header className={`bg-white border z-10 fixed w-full antialiased h-28`}>
+  <header className={`bg-white border z-10 fixed w-full antialiased h-24`}>
     <nav className="flex font-semibold justify-around items-center sm:justify-evenly flex-row h-full">
       <div className="p-2 m-1 rounded-md object-contain object-center overflow-hidden">
         <Image
@@ -28,18 +28,31 @@ const Navbar = () => (
       </div>
 
       <div className="text-black items-center px-10">
-        <ul className="w-full cursor-pointer gap-x-2 font-medium hidden md:flex md:flex-row md:justify-around text-lg items-center">
+        <motion.ul
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.2,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001
+            }
+          }}
+          className="w-full cursor-pointer gap-x-2 font-medium hidden md:flex md:flex-row md:justify-around text-lg items-center">
           {navItems.map((item, index) => (
             <motion.li
               key={index}
-              whileHover={{ scale: 1.2 }}
+             
               
               className="hover:bg-[rgb(234,218,247)] ease-in-out duration-300  max-h-[50px] items-center justify-center px-10 py-2 rounded-full"
             >
               <p className="align-middle items-center justify-center">{item}</p>
             </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
 
       <div className="rounded-full overflow-hidden bg-black text-white  hover:bg-white hover:text-black hover:border-black border">

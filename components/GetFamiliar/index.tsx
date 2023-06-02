@@ -17,6 +17,7 @@ const GetFamiliar = () => {
             x: "-50%"
           }}
           whileInView={{
+            
             x: 0,
             opacity: 1,
             transition: {
@@ -50,7 +51,7 @@ const GetFamiliar = () => {
               duration: 2
             }
           }}
-         
+
           className="overflow-visible scrollbar-none whitespace-nowrap flex flex-row px-26 h-[400px] items-center justify-center"
         >
           <Card

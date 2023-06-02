@@ -37,7 +37,7 @@ export default function Home() {
         <AppIntro />
       </section>
 
-      <section>
+      <section className="">
         <SelfImprovementTour />
       </section>
 
@@ -45,7 +45,7 @@ export default function Home() {
         <Showcase title="EQ beats IQ" descriptions={EQBeatsIQ} />
       </section>
 
-      <section className="px-28">
+      <section className="px-28 mx-12 relative overflow-hidden">
         <WhatOthersThinkOfYou />
       </section>
       {/* Sign section */}
