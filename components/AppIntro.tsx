@@ -1,10 +1,11 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { delay, motion } from "framer-motion";
-type Props = {};
+import {  motion } from "framer-motion";
 
-const AppIntro = (props: Props) => {
+
+const AppIntro = () => {
   return (
     <div
       className="relative h-screen rounded-3xl overflow-hidden flex md:flex-row w-full bg-[#f7e6da] ">

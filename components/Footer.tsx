@@ -1,10 +1,11 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IoLocationSharp } from "react-icons/io5";
-type Props = {};
 
-const Footer = (props: Props) => {
+
+const Footer = () => {
   return (
     <div className="h-full border-t flex flex-col border-[#ccc] w-screen items-center justify-around">
       <div className="mx-auto w-full mt-12 flex flex-col flex-wrap">

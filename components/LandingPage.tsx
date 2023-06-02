@@ -1,11 +1,10 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Variants, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
-type Props = {};
-
-const LandingPage = (props: Props) => {
+const LandingPage = () => {
   return (
     <motion.div
       initial={{
